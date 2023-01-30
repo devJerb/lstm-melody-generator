@@ -4,7 +4,7 @@ import music21 as m21
 import numpy as np
 import tensorflow.keras as keras
 
-KERN_DATASET_PATH = "./deutschl/test"
+KERN_DATASET_PATH = "dataset-file-path"
 ACCEPTABLE_DURATIONS = [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0]  # note values
 SAVE_DIR = "./dataset"
 SINGLE_FILE_DATASET = "file_dataset"
@@ -13,7 +13,7 @@ SEQUENCE_LENGTH = 64
 
 # set the default musicxmlPath file reader to MuseScore3.exe
 us = m21.environment.UserSettings()
-us["musicxmlPath"] = 'C:/Program Files/MuseScore 3/bin/MuseScore3.exe'
+us["musicxmlPath"] = 'your-musicXMLPath'
 
 
 # kern, MIDI, MusicXML -> m21 -> kern, MIDI, ...

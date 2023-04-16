@@ -1,6 +1,6 @@
-# RNN-LSTM Melody Generator
+# LSTM Melody Generator
 
-This project is aimed at creating a deep learning model using Recurrent Neural Networks (RNN) and Long Short-Term Memory (LSTM) for generating melodies. The model is trained on a dataset of MIDI files to learn the patterns and relationships in musical sequences.
+This project is aimed at creating a deep learning model using Long Short-Term Memory (LSTM) for generating melodies. The model is trained on a dataset of MIDI files to learn the patterns and relationships in musical sequences.
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.

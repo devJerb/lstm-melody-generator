@@ -5,7 +5,7 @@ This project is aimed at creating a deep learning model using Long Short-Term Me
 ![generated-music-piece](https://web.mit.edu/music21/doc/_images/what_18_0.png)
 
 ## Dataset
-The dataset used on this project is from (Alsace)[https://kern.humdrum.org/cgi-bin/ksdata?l=essen/europa/elsass&format=zip], a historical region in France where they have plenty of collected compositions in `.krn` files that can be accessed using any music notation softwares.
+The dataset used on this project is from [Alsace](https://kern.humdrum.org/cgi-bin/ksdata?l=essen/europa/elsass&format=zip), a historical region in France where they have plenty of collected compositions in `.krn` files that can be accessed using any music notation softwares.
 
 ## Installation
 The following packages required to access and manipulate musical notations:

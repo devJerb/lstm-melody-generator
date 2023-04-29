@@ -14,7 +14,7 @@ The following packages required to access and manipulate musical notations:
 
 ### Installation
 Start by cloning the repository to your local machine
-`git clone https://github.com/<username>/rnn-lstm-melody-generator.git`
+`git clone https://github.com/<username>/lstm-melody-generator.git`
 
 Set the MuseScore3 path to view the notations of `.krn` file sets
 ```

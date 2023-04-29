@@ -4,7 +4,7 @@ import music21 as m21
 import tensorflow.keras as keras
 from preprocess import SEQUENCE_LENGTH, MAPPING_PATH
 
-TEMPERATURE = 0.5
+TEMPERATURE = 0.4
 
 
 class MelodyGenerator:
@@ -102,11 +102,12 @@ class MelodyGenerator:
         stream.write(format, file_name)
 
 
+# create sample of seed
 melody_generator = MelodyGenerator()
 seed1 = "64 _ 69 _ _ _ 71 _ 72 _ _ 71 69 _ 76 _ _ _ _ _"
-seed2 = "71 _ _ _ 74 _ 72 _ _ 71 69 _ 68 _ _ _ 69 _ 71"
+seed2 = "71 _ _ _ 74 _ 72 _ _ 71 69 _ 68 _ _ _ 69"
 
-# higher temperature means more unpredictable
-melody = melody_generator.generate_melody(seed2, 500, SEQUENCE_LENGTH, TEMPERATURE)
+# higher temperature == higher stochastic
+melody = melody_generator.generate_melody(seed2, 1000, SEQUENCE_LENGTH, TEMPERATURE)
 print(melody)
 melody_generator.save_melody(melody)

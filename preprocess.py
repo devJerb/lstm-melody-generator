@@ -4,12 +4,12 @@ import music21 as m21
 import numpy as np
 import tensorflow.keras as keras
 
-KERN_DATASET_PATH = "./deutschl/test"
+KERN_DATASET_PATH = "./elsass"
 ACCEPTABLE_DURATIONS = [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0]  # note values
 SAVE_DIR = "./dataset"
 SINGLE_FILE_DATASET = "file_dataset"
 MAPPING_PATH = "mapping.json"
-SEQUENCE_LENGTH = 64
+SEQUENCE_LENGTH = 100  # 64
 
 # set the default musicxmlPath file reader to MuseScore3.exe
 us = m21.environment.UserSettings()
@@ -196,4 +196,5 @@ def main():
     print(f"Targets: \n{targets}\nInputs: \n{inputs}")
 
 
-main()
+if __name__ == "__main__":
+    main()

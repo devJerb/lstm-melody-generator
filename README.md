@@ -1,39 +1,38 @@
 # LSTM Melody Generator
 
-This project is aimed at creating a deep learning model using Long Short-Term Memory (LSTM) for generating melodies. The model is trained on a dataset of MIDI files to learn the patterns and relationships in musical sequences.
+This project is aimed at creating a deep learning model using Long Short-Term Memory (LSTM) for generating melodies. The model is trained on a [dataset](https://kern.humdrum.org/), specifically from the Alsace (eastern France) of MIDI files to learn the patterns and relationships in musical sequences.
 
-## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+![generated-music-piece](https://web.mit.edu/music21/doc/_images/what_18_0.png)
 
-### Prerequisites
-The following packages are required to run this project:
-1. [TensorFlow](https://www.tensorflow.org/install)
-2. [NumPy](https://numpy.org/)
-3. [Music21](http://web.mit.edu/music21/)
+## Dataset
+The dataset used on this project is from (Alsace)[https://kern.humdrum.org/cgi-bin/ksdata?l=essen/europa/elsass&format=zip], a historical region in France where they have plenty of collected compositions in `.krn` files that can be accessed using any music notation softwares.
+
+## Installation
+The following packages required to access and manipulate musical notations:
+1. [Musecore](https://musescore.org/en)
+2. [Music21](http://web.mit.edu/music21/)
 
 ### Installation
-1. Clone the repository to your local machine
-
+Start by cloning the repository to your local machine
 `git clone https://github.com/<username>/rnn-lstm-melody-generator.git`
 
-2. Navigate to the project directory
-
-`cd rnn-lstm-melody-generator`
+Set the MuseScore3 path to view the notations of `.krn` file sets
+```
+# set the default musicxmlPath file reader to MuseScore3.exe
+us = m21.environment.UserSettings()
+us["musicxmlPath"] = 'C:/Program Files/MuseScore 3/bin/MuseScore3.exe'
+```
 
 ### Usage
-To preprocess the model, run the following command
-
+1. Towards the preprocessing, provided are `.txt` files from the `.krn` file sets and are then tokenized stored within `mapping.json` as `file_dataset` being the final output of preprocessing
 `python preprocess.py`
 
-To train the model, run the following command
-
+2. For training, an `.h5` file is produced for creating the melody
 `python train.py`
 
-To generate the model, run the following command
-
+To generate the model, run the following command; the seeds can be configured to the formatting required. 
 `python melody_generator.py`
 
 ### Acknowledgments
 
 [Valerio Velardo - The Sound of AI](https://www.youtube.com/@ValerioVelardoTheSoundofAI)
-

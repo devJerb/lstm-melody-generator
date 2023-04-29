@@ -9,7 +9,7 @@ The dataset used on this project is from (Alsace)[https://kern.humdrum.org/cgi-b
 
 ## Installation
 The following packages required to access and manipulate musical notations:
-1. [Musecore](https://musescore.org/en)
+1. [MuseScore3](https://musescore.org/en)
 2. [Music21](http://web.mit.edu/music21/)
 
 ### Installation

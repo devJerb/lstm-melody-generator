@@ -24,11 +24,11 @@ us["musicxmlPath"] = 'C:/Program Files/MuseScore 3/bin/MuseScore3.exe'
 ```
 
 ### Usage
-1. Towards the preprocessing, provided are `.txt` files from the `.krn` file sets and are then tokenized stored within `mapping.json` as `file_dataset` being the final output of preprocessing
+Towards the preprocessing, provided are `.txt` files from the `.krn` file sets and are then tokenized stored within `mapping.json` as `file_dataset` being the final output of preprocessing
 
 `python preprocess.py`
 
-2. For training, an `.h5` file is produced for creating the melody
+For training, an `.h5` file is produced for creating the melody
 
 `python train.py`
 

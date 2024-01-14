@@ -25,3 +25,6 @@ LEARNING_RATE = 0.001
 EPOCHS = 50
 BATCH_SIZE = 64
 SAVE_MODEL_PATH = "model.h5"
+
+# `melody_generator.py`
+TEMPERATURE = 0.4

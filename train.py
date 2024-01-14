@@ -34,6 +34,7 @@ def train(output_units=OUTPUT_UNITS, num_units=NUM_UNITS, loss=LOSS, learning_ra
 
     # Save the model
     model.save(SAVE_MODEL_PATH)
+    return model
 
 
 if __name__ == "__main__":

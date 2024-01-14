@@ -3,7 +3,7 @@ import json
 import numpy as np
 import music21 as m21
 import tensorflow.keras as keras
-from constants import KERN_DATASET_PATH, SAVE_DIR, MAPPING_PATH, SINGLE_FILE_DATASET, SEQUENCE_LENGTH, MUSIC_XML_PATH
+from constants import RESOURCE_PATH, KERN_DATASET_PATH, SAVE_DIR, MAPPING_PATH, SINGLE_FILE_DATASET, SEQUENCE_LENGTH, MUSIC_XML_PATH
 
 # Note values
 ACCEPTABLE_DURATIONS = [
@@ -117,9 +117,12 @@ def encode_song(song, time_step=0.25):
     return encoded_song
 
 
-def preprocess(dataset_path):
+def preprocessing(dataset_path):
     if not os.path.exists(SAVE_DIR):
         os.mkdir(SAVE_DIR)
+    
+    if not os.path.exists(RESOURCE_PATH):
+        os.mkdir(RESOURCE_PATH)
     
     songs = load_songs_in_kern(dataset_path)
     print(f"Loaded {len(songs)} songs")
@@ -244,9 +247,9 @@ def generate_training_sequences(sequence_length):
             print(f'Failed creating training sequences\nException raised: {e}')
 
 
-def main():
+def preprocess():
     initialize_client()
-    preprocess(KERN_DATASET_PATH)
+    preprocessing(KERN_DATASET_PATH)
     songs = create_single_file_dataset(SAVE_DIR, SINGLE_FILE_DATASET, SEQUENCE_LENGTH)
     create_mapping(songs, MAPPING_PATH)
     inputs, targets = generate_training_sequences(SEQUENCE_LENGTH)
@@ -255,4 +258,4 @@ def main():
     
 
 if __name__ == "__main__":
-    inputs, targets = main()
+    inputs, targets = preprocess()

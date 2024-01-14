@@ -2,3 +2,6 @@ venv
 .idea
 .env
 dataset
+__pycache__
+*.json
+file_dataset

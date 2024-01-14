@@ -1,7 +1,7 @@
 from preprocess import generate_training_sequences, SEQUENCE_LENGTH
 import tensorflow.keras as keras
 
-OUTPUT_UNITS = 26  # based on mapping.json; length of json - 2
+OUTPUT_UNITS = 26  # based on `mapping.json`; length of json - 2
 NUM_UNITS = [256]
 LOSS = "sparse_categorical_crossentropy"
 LEARNING_RATE = 0.001
